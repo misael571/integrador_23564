@@ -1,8 +1,13 @@
 function total(){
     const precio = 1000;
-    const cantidad = document.getElementById("cantidad").value;
-     let total = precio * cantidad;
-    document.getElementById("total").innerHTML = total;
+    let cantidad = document.getElementById("cantidad").value;
+    if(cantidad >=1){
+        let total = precio * cantidad;
+        document.getElementById("total").innerHTML = total;
+    }else{
+        document.getElementById("total").innerHTML="Ingrese una cantidad mayor o igual a 1";
+    }
+    
 }
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
