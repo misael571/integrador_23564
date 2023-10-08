@@ -1,0 +1,7 @@
+.imgDark {
+    filter: brightness(50%);
+}
+.bgrTex {
+    background-color: rgb(45, 45, 45);
+}
+
