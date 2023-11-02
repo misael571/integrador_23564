@@ -44,6 +44,42 @@
     </header>
 
     <main>
+        <!--categorias-->
+        <div class="d-flex justify-content-center flex-wrap my-4  ">
+            <div class="card" style="width: 20rem;">
+                <div class="card-body text-center border border-primary border-2 ">
+                    <h5 class="card-title">Estudiante</h5>
+                    <p class="card-text">Tienen un descuento de</p>
+                    <h5 class="card-title">80%</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">*presentar documentacion</h6>
+                </div>
+            </div>
+            <div class="card mx-2 " style="width: 20rem; ">
+                <div class="card-body text-center border border-info border-2">
+                    <h5 class="card-title">Trainne</h5>
+                    <p class="card-text">Tienen un descuento de</p>
+                    <h5 class="card-title">50%</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">*presentar documentacion</h6>
+                </div>
+            </div>
+            <div class="card" style="width: 20rem;">
+                <div class="card-body text-center border border-warning border-2">
+                    <h5 class="card-title">Junior</h5>
+                    <p class="card-text">Tienen un descuento de</p>
+                    <h5 class="card-title">15%</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">*presentar documentacion</h6>
+                </div>
+            </div>
+        </div>
+        <!--titulo-->
+        <div class="container text-center ">
+            <div class="row">
+                <p class="fs-4 ">venta</p>
+            </div>
+            <div class="row">
+                <h2 class="fs-1 ">VALOR DE TICKET $200</h2>
+            </div>
+        </div>
         <!--formulario de compra-->
         <div class="container my-3 ">
             <form action="../server/procesarcompra.html" method="post" class="needs-validation" novalidate>
@@ -61,18 +97,55 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <div class="col ">
+                        <input class="form-control" name="email" id="email" type="email" placeholder="Email" required>
+                        <div class="invalid-feedback">
+                            Por favor ingrese un email valido
+                        </div>
+                    </div>
+                </div>
                 <div class="row mb-3 ">
                     <div class="col">
+                        <label for="cantidad" class="mb-1 ">Cantidad</label>
                         <input class="form-control" name="cantidad" id="cantidad" onchange="total()" onkeyup="total()" type="number" placeholder="cantidad" min="1" required>
-                        <div class="small fw-lighter">valor de tiket 1000</div>
                     </div>
-                    <div class="col">total a pagar = <span id="total">0</span> </div>
+                    <div class="col">
+                        <label for="categoria" class="mb-1">Categoria</label>
+                        <select class="form-select" name="categoria" id="categoria">
+                            <option value="estudiante">Estudiante</option>
+                            <option value="trainee">Trainne</option>
+                            <option value="junior">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col mb-3 bg-info p-1 ">
+                        total a pagar $ = <span id="total">0</span> 
+                    </div>
                 </div>
                 <div class="row">
-                    <input type="submit" value="enviar" class="btn btn-outline-success">
+                    <div class="col d-grid ">
+                        <input type="button" value="Borrar" class="btn btn-outline-success">
+                    </div>
+                    <div class="col d-grid ">
+                        <input type="button" value="Resumen" class="btn btn-outline-success">
+                    </div>
                 </div>
             </form>
         </div>
+        <!--footer-->
+        <footer class="py-3 bg-body-tertiary"  data-bs-theme="dark" >
+            <ul class="nav justify-content-center pb-1 justify-content-around ">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Preguntas <br>frecuntes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contactanos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Prensa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Conferencias</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Terminos y<br> condiciones</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacidad</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Estudiantes</a></li>
+            </ul>
+        </footer>
     </main>
     
 
