@@ -47,7 +47,7 @@
         <!--categorias-->
         <div class="d-flex justify-content-center flex-wrap my-4  ">
             <div class="card mb-3" style="width: 20rem;">
-                <div class="card-body text-center border border-primary border-2 ">
+                <div class="card-body text-center border border-primary border-2 " onclick="selectValue(80)">
                     <h5 class="card-title mt-2">Estudiante</h5>
                     <p class="card-text mt-3">Tienen un descuento de</p>
                     <h5 class="card-title mt-3">80%</h5>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="card mx-2 mb-3" style="width: 20rem; ">
-                <div class="card-body text-center border border-info border-2">
+                <div class="card-body text-center border border-info border-2" onclick="selectValue(50)">
                     <h5 class="card-title mt-2">Trainne</h5>
                     <p class="card-text mt-3">Tienen un descuento de</p>
                     <h5 class="card-title mt-3">50%</h5>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="card mb-3" style="width: 20rem;">
-                <div class="card-body text-center border border-warning border-2">
+                <div class="card-body text-center border border-warning border-2" onclick="selectValue(15)">
                     <h5 class="card-title mt-2">Junior</h5>
                     <p class="card-text mt-3">Tienen un descuento de</p>
                     <h5 class="card-title mt-3">15%</h5>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col">
                         <label for="categoria" class="mb-1">Categoria</label>
-                        <select class="form-select" name="categoria" id="categoria">
+                        <select class="form-select" name="categoria" id="categoria" onchange="selectValue()">
                             <option value="80">Estudiante 80%</option>
                             <option value="50">Trainne 50%</option>
                             <option value="15">Junior 15%</option>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="row">
                     <div class="col d-grid ">
-                        <input type="button" value="Borrar" class="btn btn-outline-success">
+                        <input type="reset" value="Borrar" class="btn btn-outline-success">
                     </div>
                     <div class="col d-grid ">
                         <input type="button" value="Resumen" class="btn btn-outline-success">

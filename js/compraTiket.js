@@ -1,8 +1,10 @@
 function total(){
-    const precio = 1000;
+    const precio = 200;
     let cantidad = document.getElementById("cantidad").value;
+    let desc = document.getElementById("categoria").value;
     if(cantidad >=1){
         let total = precio * cantidad;
+        total= total - (total*desc/100);
         document.getElementById("total").innerHTML = total;
     }else{
         document.getElementById("total").innerHTML="Ingrese una cantidad mayor o igual a 1";
@@ -29,4 +31,8 @@ function total(){
         }, false)
     })
 })()
+
+function selectValue(valor){
+    document.getElementById("categoria").value=valor;
+}
 
